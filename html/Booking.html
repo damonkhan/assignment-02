@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/master.css">
 </head>
 <body>
-    <h1>Bookings</h1>
+    <h2>Secure your lodge in 2 minutes or less!</h2>
     <div class="links">
         <a href="../index.html">Home</a>
         <a href="Studio-Lodge.html">Studio Lodge</a>
@@ -15,6 +15,72 @@
         <a href="Booking.html">Booking</a>
         <a href="About.html">About Us</a>
         <a href="Activities.html">Things To Do</a>
+    </div>
+
+    <div>
+        <form action="GET">
+            <div>
+                <p>Details</p>
+                <select name="title" id="title" >
+                    <option value="Mr.">Mr.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Mrs.">Mrs.</option>
+                </select>
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name" required>
+            </div>
+            <div>
+                <p>Contact info</p>
+                <input type="email" placeholder="Email" title="here is a title" required>
+                <input type="number" placeholder="Mobile">
+            </div>
+            <div>
+                <p>Lodging</p>
+                <select name="room-type" id="room-type">
+                    <option value="single">Single lodge</option>
+                    <option value="double">Double lodge</option>
+                    <option value="studio">Studio lodge</option>
+                    <option value="studio">Studio lodge</option>
+                </select>
+                <br>
+                <input type="date" id="check-in">
+                <input type="date" id="check-out">
+                <select name="num-rooms" id="num-rooms">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                <select name="num-adults" id="num-adults" >
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+                <select name="num-child" id="num-child">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Complete booking">
+            </div>
+        </form>
     </div>
 </body>
 </html>
