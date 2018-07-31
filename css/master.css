@@ -7,3 +7,11 @@
     height: 400px;
     width: 600px;
 }
+
+.price-before {
+    text-decoration: line-through;
+}
+
+.price {
+    font-weight: bold;
+}
