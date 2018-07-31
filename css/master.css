@@ -1,9 +1,4 @@
-#hero-image {
-    height: 400px;
-    width: 600px;
-}
-
-.img-room {
+#hero-image, .img-room, .img-activities {
     height: 400px;
     width: 600px;
 }
