@@ -15,94 +15,129 @@
         <a href="About.html">About</a>
         <a href="Activities.html">Things To Do</a>
     </div>
-    <h2>Secure your lodge in 2 minutes or less!</h2>
+    <h2>Secure your room in less than 2 minutes!</h2>
     <div>
         <form action="">
             <div>
-                <p>Details</p>
-                <select name="title" id="title" title="Title">
-                    <option value="Mr.">Mr.</option>
-                    <option value="Ms.">Ms.</option>
-                    <option value="Mrs.">Mrs.</option>
-                </select>
-                <input type="text" placeholder="First name" required>
-                <input type="text" placeholder="Last name" required>
+                <h3>Details</h3>
+                <div>
+                    <label for="title">Title</label>
+                    <select name="title" id="title" title="Title">
+                        <option value="Mr.">Mr.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Mrs.">Mrs.</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" required>
+                </div>
+                <div>
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text" required>
+                </div>
             </div>
             <div>
-                <p>Contact info</p>
-                <input type="email" placeholder="Email" title="here is a title" required>
-                <input type="number" placeholder="Mobile">
+                <h3>Contact info</h3>
+                <div>
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" required>
+                </div>
+                <div>
+                    <label for="contact-number">Contact Number</label>
+                    <input id="contact-number" type="number">
+                </div>
+
             </div>
             <div>
-                <p>Lodging</p>
-                <select name="room-type" id="room-type" title="Select a room">
-                    <option value="single">Single Bedroom Unit</option>
-                    <option value="double">Double Bedroom Unit</option>
-                    <option value="studio">Studio Unit</option>
-                </select>
+                <h3>Lodging</h3>
+                <div>
+                    <label for="room-type">Unit Type</label>
+                    <select name="room-type" id="room-type" title="Select a room">
+                        <option value="single">Single Bedroom Unit</option>
+                        <option value="double">Double Bedroom Unit</option>
+                        <option value="studio">Studio Unit</option>
+                    </select>
+                </div>
                 <br>
-                <input type="date" id="check-in" title="Check-in Date">
-                <input type="date" id="check-out" title="Check-out Date">
-                <select name="num-rooms" id="num-rooms" title="Num rooms">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select>
-                <select name="num-adults" id="num-adults" title="Num adults">
-                    <option value="1">1</option>
-                    <option value="2" selected>2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select>
-                <select name="num-child" id="num-child" title="Num children">
-                    <option value="0" selected>0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select>
-                <select name="" id="arrive-time" title="Arrival time">
-                    <option value="time" selected>Select time</option>
-                    <option value="10:00">10:00</option>
-                    <option value="10:00">10:30</option>
-                    <option value="10:00">11:00</option>
-                    <option value="10:00">11:30</option>
-                    <option value="10:00">12:00</option>
-                    <option value="10:00">12:30</option>
-                    <option value="10:00">13:00</option>
-                    <option value="10:00">13:30</option>
-                    <option value="10:00">14:00</option>
-                    <option value="10:00">14:30</option>
-                    <option value="10:00">15:00</option>
-                    <option value="10:00">15:30</option>
-                    <option value="10:00">16:00</option>
-                    <option value="10:00">16:30</option>
-                    <option value="10:00">17:00</option>
-                    <option value="10:00">17:30</option>
-                    <option value="10:00">18:00</option>
-                    <option value="10:00">18:30</option>
-                    <option value="10:00">19:00</option>
-                    <option value="10:00">19:30</option>
-                    <option value="10:00">20:00</option>
-                    <option value="10:00">20:30</option>
-                    <option value="10:00">21:00</option>
-                    <option value="10:00">21:30</option>
-                    <option value="10:00">22:00</option>
-                </select>
-                <label for="checkbox-breakfast">Include breakfast</label><input type="checkbox" value="breakfast" id="checkbox-breakfast" title="Include breakfast" checked>
+                <div>
+                    <label for="check-in">Check-In Date</label>
+                    <input type="date" id="check-in" title="Check-in Date">
+                </div>
+                <div>
+                    <label for="check-out">Check-Out Date</label>
+                    <input type="date" id="check-out" title="Check-out Date">
+                </div>
+                <div>
+                    <label for="num-rooms">Rooms</label>
+                    <select name="num-rooms" id="num-rooms" title="Num rooms">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="num-adults">Adults</label>
+                    <select name="num-adults" id="num-adults" title="Num adults">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="num-children">Children</label>
+                    <select name="num-child" id="num-children" title="Num children">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="arrive-time">Arrival Time</label>
+                    <select name="" id="arrive-time" title="Arrival time">
+                        <option value="time" selected>Select time</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:00">10:30</option>
+                        <option value="10:00">11:00</option>
+                        <option value="10:00">11:30</option>
+                        <option value="10:00">12:00</option>
+                        <option value="10:00">12:30</option>
+                        <option value="10:00">13:00</option>
+                        <option value="10:00">13:30</option>
+                        <option value="10:00">14:00</option>
+                        <option value="10:00">14:30</option>
+                        <option value="10:00">15:00</option>
+                        <option value="10:00">15:30</option>
+                        <option value="10:00">16:00</option>
+                        <option value="10:00">16:30</option>
+                        <option value="10:00">17:00</option>
+                        <option value="10:00">17:30</option>
+                        <option value="10:00">18:00</option>
+                        <option value="10:00">18:30</option>
+                        <option value="10:00">19:00</option>
+                        <option value="10:00">19:30</option>
+                        <option value="10:00">20:00</option>
+                        <option value="10:00">20:30</option>
+                        <option value="10:00">21:00</option>
+                        <option value="10:00">21:30</option>
+                        <option value="10:00">22:00</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="checkbox-breakfast" id="breakfast-label">Include breakfast</label>
+                    <input type="checkbox" value="breakfast" id="checkbox-breakfast" title="Include breakfast" checked>
+                </div>
             </div>
             <div>
                 <input type="reset" value="Clear">

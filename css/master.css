@@ -10,3 +10,10 @@
 .price {
     font-weight: bold;
 }
+label {
+    display: block;
+}
+
+#breakfast-label {
+    display: inline;
+}
