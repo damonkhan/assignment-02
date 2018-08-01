@@ -62,11 +62,42 @@
                 <br>
                 <div>
                     <label for="check-in">Check-In Date</label>
-                    <input type="date" id="check-in" title="Check-in Date">
+                    <input type="date" id="check-in" title="Check-in Date" onchange="checkDates()">
                 </div>
                 <div>
                     <label for="check-out">Check-Out Date</label>
-                    <input type="date" id="check-out" title="Check-out Date">
+                    <input type="date" id="check-out" title="Check-out Date" onchange="checkDates()">
+                </div>
+                <div id="arrival" class="hidden">
+                    <label for="arrive-time">Arrival Time</label>
+                    <select name="arrival-time" id="arrive-time" title="Arrival time">
+                        <option value="time" selected>Select time</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:00">10:30</option>
+                        <option value="10:00">11:00</option>
+                        <option value="10:00">11:30</option>
+                        <option value="10:00">12:00</option>
+                        <option value="10:00">12:30</option>
+                        <option value="10:00">13:00</option>
+                        <option value="10:00">13:30</option>
+                        <option value="10:00">14:00</option>
+                        <option value="10:00">14:30</option>
+                        <option value="10:00">15:00</option>
+                        <option value="10:00">15:30</option>
+                        <option value="10:00">16:00</option>
+                        <option value="10:00">16:30</option>
+                        <option value="10:00">17:00</option>
+                        <option value="10:00">17:30</option>
+                        <option value="10:00">18:00</option>
+                        <option value="10:00">18:30</option>
+                        <option value="10:00">19:00</option>
+                        <option value="10:00">19:30</option>
+                        <option value="10:00">20:00</option>
+                        <option value="10:00">20:30</option>
+                        <option value="10:00">21:00</option>
+                        <option value="10:00">21:30</option>
+                        <option value="10:00">22:00</option>
+                    </select>
                 </div>
                 <div>
                     <label for="num-rooms">Rooms</label>
@@ -104,37 +135,6 @@
                     </select>
                 </div>
                 <div>
-                    <label for="arrive-time">Arrival Time</label>
-                    <select name="arrival-time" id="arrive-time" title="Arrival time">
-                        <option value="time" selected>Select time</option>
-                        <option value="10:00">10:00</option>
-                        <option value="10:00">10:30</option>
-                        <option value="10:00">11:00</option>
-                        <option value="10:00">11:30</option>
-                        <option value="10:00">12:00</option>
-                        <option value="10:00">12:30</option>
-                        <option value="10:00">13:00</option>
-                        <option value="10:00">13:30</option>
-                        <option value="10:00">14:00</option>
-                        <option value="10:00">14:30</option>
-                        <option value="10:00">15:00</option>
-                        <option value="10:00">15:30</option>
-                        <option value="10:00">16:00</option>
-                        <option value="10:00">16:30</option>
-                        <option value="10:00">17:00</option>
-                        <option value="10:00">17:30</option>
-                        <option value="10:00">18:00</option>
-                        <option value="10:00">18:30</option>
-                        <option value="10:00">19:00</option>
-                        <option value="10:00">19:30</option>
-                        <option value="10:00">20:00</option>
-                        <option value="10:00">20:30</option>
-                        <option value="10:00">21:00</option>
-                        <option value="10:00">21:30</option>
-                        <option value="10:00">22:00</option>
-                    </select>
-                </div>
-                <div>
                     <label for="checkbox-breakfast" id="breakfast-label">Include breakfast</label>
                     <input type="checkbox" value="breakfast" id="checkbox-breakfast" title="Include breakfast" checked>
                 </div>
@@ -145,5 +145,6 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript" src="../js/Booking.js" async></script>
 </body>
 </html>

@@ -10,6 +10,11 @@
 .price {
     font-weight: bold;
 }
+
+.hidden {
+    display: none;
+}
+
 label {
     display: block;
 }
