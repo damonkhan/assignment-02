@@ -61,12 +61,16 @@
                 </div>
                 <br>
                 <div>
-                    <label for="check-in">Check-In Date</label>
-                    <input type="date" id="check-in" title="Check-in Date" onchange="checkDates()">
+                    <label for="check-in">Check In Date</label>
+                    <input type="date" id="check-in" title="Check-in Date" data-date="" data-date-format="DD-MM-YYYY">
                 </div>
                 <div>
-                    <label for="check-out">Check-Out Date</label>
-                    <input type="date" id="check-out" title="Check-out Date" onchange="checkDates()">
+                    <label for="check-out">Check Out Date</label>
+                    <input type="date" id="check-out" title="Check-out Date">
+                </div>
+                <div id="date-error" class="hidden">
+                    <!--Used to display date-related error messages-->
+                    <p id="error-message"></p>
                 </div>
                 <div id="arrival" class="hidden">
                     <label for="arrive-time">Arrival Time</label>
