@@ -54,6 +54,7 @@
                 <div>
                     <label for="room-type">Unit Type</label>
                     <select name="room-type" id="room-type" title="Select a room">
+                        <option value="none">Select unit type</option>
                         <option value="single">Single Bedroom Unit</option>
                         <option value="double">Double Bedroom Unit</option>
                         <option value="studio">Studio Unit</option>
@@ -139,12 +140,15 @@
                     </select>
                 </div>
                 <div>
-                    <label for="checkbox-breakfast" id="breakfast-label">Include breakfast</label>
-                    <input type="checkbox" value="breakfast" id="checkbox-breakfast" title="Include breakfast" checked>
+                    <label for="checkbox-breakfast" id="breakfast-label">Breakfast: $30pp</label>
+                    <input type="checkbox" value="breakfast" id="checkbox-breakfast" title="Include breakfast">
                 </div>
             </div>
             <div>
-                <input type="reset" value="Clear">
+                <h2>Total: $<span id="total">0</span>.00</h2>
+            </div>
+            <div>
+                <input type="reset" value="Clear" id="reset">
                 <input type="submit" value="Complete booking">
             </div>
         </form>
