@@ -68,9 +68,9 @@ img {vertical-align: middle;}
 /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 4.5s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 4.5s;
 }
 
 @-webkit-keyframes fade {
@@ -79,7 +79,7 @@ img {vertical-align: middle;}
 }
 
 @keyframes fade {
-    from {opacity: .4}
+    from {opacity: .75}
     to {opacity: 1}
 }
 
