@@ -6,16 +6,23 @@
     <link rel="stylesheet" href="../css/master.css">
 </head>
 <body>
-    <div class="links">
-        <a href="../index.html">Home</a>
-        <a href="Rooms.html#single-unit">Single unit</a>
-        <a href="Rooms.html#double-unit">Double unit</a>
-        <a href="Rooms.html#studio-unit">Studio unit</a>
-        <a href="Booking.html">Booking</a>
-        <a href="About.html">About</a>
-        <a href="Activities.html">Things To Do</a>
+    <div id="wrapper">
+        <a href="../index.html"><img id="logo" src="../images/logo.png" alt="Treehouse Logo"></a>
+        <ul id="navbar">
+            <li class="navbar-li"><a href="../index.html" class="navbar-links">Home</a></li>
+            <li class="navbar-li dropdown">
+                <a href="javascript:void(0)" class="navbar-links dropbtn">Rooms</a>
+                <div class="dropdown-content">
+                    <a href="Rooms.html#single-unit" class="navbar-links dropbtn">Single unit</a>
+                    <a href="Rooms.html#double-unit" class="navbar-links">Double unit</a>
+                    <a href="Rooms.html#studio-unit" class="navbar-links">Studio unit</a>
+                </div>
+            </li>
+            <li class="navbar-li"><a href="Booking.html" class="navbar-links">Booking</a></li>
+            <li class="navbar-li"><a href="About.html" class="navbar-links">About</a></li>
+            <li class="navbar-li"><a href="Activities.html" class="navbar-links">Things To Do</a></li>
+        </ul>
     </div>
-
     <h1>Top things to do in Hamilton</h1>
     <hr>
     <div>

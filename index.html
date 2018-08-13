@@ -6,53 +6,60 @@
     <link rel="stylesheet" href="css/master.css">
 
 </head>
-<body>
-    <div class="links">
-        <a href="index.html">Home</a>
-        <a href="html/Rooms.html#single-unit">Single unit</a>
-        <a href="html/Rooms.html#double-unit">Double unit</a>
-        <a href="html/Rooms.html#studio-unit">Studio unit</a>
-        <a href="html/Booking.html">Booking</a>
-        <a href="html/About.html">About</a>
-        <a href="html/Activities.html">Things To Do</a>
+<body id="index-body">
+    <div id="wrapper">
+        <a href="index.html"><img id="logo" src="images/logo.png" alt="Treehouse Logo"></a>
+        <ul id="navbar">
+            <li class="navbar-li"><a href="index.html" class="navbar-links">Home</a></li>
+            <li class="navbar-li dropdown">
+                <a href="javascript:void(0)" class="navbar-links dropbtn">Rooms</a>
+                <div class="dropdown-content">
+                    <a href="html/Rooms.html#single-unit" class="navbar-links dropbtn">Single unit</a>
+                    <a href="html/Rooms.html#double-unit" class="navbar-links">Double unit</a>
+                    <a href="html/Rooms.html#studio-unit" class="navbar-links">Studio unit</a>
+                </div>
+            </li>
+            <li class="navbar-li"><a href="html/Booking.html" class="navbar-links">Booking</a></li>
+            <li class="navbar-li"><a href="html/About.html" class="navbar-links">About</a></li>
+            <li class="navbar-li"><a href="html/Activities.html" class="navbar-links">Things To Do</a></li>
+        </ul>
     </div>
-    <!--Slideshow code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto-->
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img class="carousel-img" src="images/singe-bedroom.jpg">
+    <div id="slideshow-wrapper">
+        <!--Slideshow code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto-->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img class="carousel-img" src="images/singe-bedroom.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img class="carousel-img" src="images/double-bed.jpg">
+            </div>
+
+            <div class="mySlides fade">
+                <img class="carousel-img" src="images/studio.jpg">
+            </div>
+
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img class="carousel-img" src="images/double-bed.jpg">
+        <br>
+        <div id="dot-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img class="carousel-img" src="images/studio.jpg">
+    </div>
+    <div id="text-wrapper">
+        <div id="ratings-wrapper">
+            <span class="ratings-span"><strong>5-Stars</strong> on Trip Advisor</span>
+            <span class="ratings-span"><strong>Excellent</strong> on Booking.com</span>
         </div>
-
-    </div>
-    <br>
-
-    <div style="text-align:center">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-    <div id="customer-ratings">
-        <p>Rated <strong>5-Stars</strong> on Trip Advisor</p>
-        <p>Rated <strong>Excellent</strong> on Booking.com</p>
-    </div>
-    <div class="main-text-content">
-        <p>Bacon ipsum dolor amet qui eiusmod ut pig boudin, sunt turducken picanha burgdoggen sed filet mignon biltong. Chuck short loin shankle deserunt velit short ribs pork magna tri-tipanim.          Ground round drumstick ad short ribs tenderloin veniam, do sunt turducken. Short ribs cillum ut, sint pork chop turkey deserunt drumstick mollit eu ham hock dolore aliqua bresaola               porchetta.</p>
-
-        <h2>Directions</h2>
-        <h3>Waikato Hospital</h3>
-        <p>Bacon ipsum dolor amet qui eiusmod ut pig boudin, sunt turducken picanha burgdoggen sed filet mignon biltong. Chuck short loin shankle deserunt velit short ribs pork magna tri-tip anim. Ground round drumstick ad short ribs tenderloin veniam, do sunt turducken. Short ribs cillum ut, sint pork chop turkey deserunt drumstick mollit eu ham hock dolore aliqua bresaola porchetta.</p>
-        <h3>Te Awa</h3>
-        <p>Bacon ipsum dolor amet qui eiusmod ut pig boudin, sunt turducken picanha burgdoggen sed filet mignon biltong. Chuck short loin shankle deserunt velit short ribs pork magna tri-tip anim. Ground round drumstick ad short ribs tenderloin veniam, do sunt turducken. Short ribs cillum ut, sint pork chop turkey deserunt drumstick mollit eu ham hock dolore aliqua bresaola porchetta.</p>
+        <div class="main-text-content">
+            <p>Bacon ipsum dolor amet qui eiusmod ut pig boudin, sunt turducken picanha burgdoggen sed filet mignon biltong. Chuck short loin shankle deserunt velit short ribs pork magna tri-tipanim.          Ground round drumstick ad short ribs tenderloin veniam, do sunt turducken. Short ribs cillum ut, sint pork chop turkey deserunt drumstick mollit eu ham hock dolore aliqua bresaola               porchetta.</p>
+            <h2>Directions</h2>
+            <h3>Waikato Hospital</h3>
+            <p>Bacon ipsum dolor amet qui eiusmod ut pig boudin, sunt turducken picanha burgdoggen sed filet mignon biltong. Chuck short loin shankle deserunt velit short ribs pork magna tri-tip anim. Ground round drumstick ad short ribs tenderloin veniam, do sunt turducken. Short ribs cillum ut, sint pork chop turkey deserunt drumstick mollit eu ham hock dolore aliqua bresaola porchetta.</p>
+            <h3>Te Awa</h3>
+            <p>Bacon ipsum dolor amet qui eiusmod ut pig boudin, sunt turducken picanha burgdoggen sed filet mignon biltong. Chuck short loin shankle deserunt velit short ribs pork magna tri-tip anim. Ground round drumstick ad short ribs tenderloin veniam, do sunt turducken. Short ribs cillum ut, sint pork chop turkey deserunt drumstick mollit eu ham hock dolore aliqua bresaola porchetta.</p>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
