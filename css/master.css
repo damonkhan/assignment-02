@@ -1,6 +1,42 @@
 body {
+    background-color: #e8e8e8;
     font-family: Verdana, sans-serif;
     margin: 0;
+}
+
+h2,
+h3 {
+    color: #536d83;
+}
+
+input[type="date"],
+select {
+    height: 25px;
+
+}
+
+select {
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #f4d742;
+    border-radius: 5px;
+    display: block;
+    height: 2.5em;
+    float: right;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    border-radius: 3px;
+    height: 25px;
+    width: 60%;
+}
+
+label {
+    margin-bottom: 5px;
 }
 
 #index-body {
@@ -18,7 +54,9 @@ body {
 }
 
 
-#hero-image, .img-room, .img-activities {
+#hero-image,
+.img-room,
+.img-activities {
     height: 400px;
     width: 600px;
 }
@@ -49,17 +87,20 @@ label {
 
 /*Slideshow code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto*/
 
-* {box-sizing: border-box;}
 .mySlides {
     display: none;
 }
-img {vertical-align: middle;}
+
+img {
+    vertical-align: middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    margin: 2.5% auto auto auto;
     max-width: fit-content;
     position: relative;
-    margin: 2.5% auto auto auto;
 }
 
 /*#slideshow-wrapper {*/
@@ -144,7 +185,8 @@ img {vertical-align: middle;}
     color: black
 }
 
-.navbar-li .navbar-links, .dropbtn {
+.navbar-li .navbar-links,
+.dropbtn {
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -195,7 +237,6 @@ li.dropdown {
 }
 
 .main-text-content {
-    background: #f2f2f2;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -203,7 +244,103 @@ li.dropdown {
 }
 
 #text-wrapper {
+    background: #e8e8e8;
     height: 100%;
     width: 100%;
-    background: #f2f2f2;
+}
+
+.form-divs, #index-div {
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+    display: block;
+    margin: 20px auto;
+    padding: 25px;
+    width: 50%;
+}
+
+#booking-blurb {
+    display: block;
+    text-align: left;
+    margin: auto;
+    padding: 25px;
+    width: 35%;
+}
+
+#booking-body {
+    background-color: #e8e8e8;
+}
+
+#num-rooms,
+#num-adults,
+#num-children {
+    width: 10%;
+}
+
+#date-div {
+    display: block;
+    float: left;
+    margin-right: 25px;
+}
+
+form input,
+form select {
+    margin-bottom: 10px;
+}
+
+#index-div, #ratings-wrapper, .room-div, .activities-div, .about-div {
+    background-color: #fff;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+    display: block;
+    margin: 20px auto;
+    padding: 25px;
+    width: 80%;
+}
+
+.img-room {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.price-text {
+    text-align: right;
+}
+
+.link-button {
+    background-color: #f4d742;
+    border: 1px solid #f4d742;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    font-weight: bold;
+    margin-left: 25px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.link-button:visited {
+    color: #000;
+}
+
+.link-button:hover {
+    border: 1px solid #e0c53c;
+    background-color: #e0c53c;
+}
+
+.activities-div {
+    height: 530px;
+}
+
+.img-activities {
+    margin-right: 20px;
+}
+
+.activities-text {
+    margin-bottom: 30px;
+}
+
+.activities-links {
+    margin: 0 20px 0 0;
+}
+
+#room-type {
+    width: 335px;
 }

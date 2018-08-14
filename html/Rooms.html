@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Room Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodgings | Treehut</title>
     <link rel="stylesheet" href="../css/master.css">
 </head>
-<body>
+<body id="">
     <div id="wrapper">
         <a href="../index.html"><img id="logo" src="../images/logo.png" alt="Treehouse Logo"></a>
         <ul id="navbar">
             <li class="navbar-li"><a href="../index.html" class="navbar-links">Home</a></li>
             <li class="navbar-li dropdown">
-                <a href="javascript:void(0)" class="navbar-links dropbtn">Rooms</a>
+                <a href="Rooms.html" class="navbar-links dropbtn">Rooms</a>
                 <div class="dropdown-content">
                     <a href="Rooms.html#single-unit" class="navbar-links dropbtn">Single unit</a>
                     <a href="Rooms.html#double-unit" class="navbar-links">Double unit</a>
@@ -23,16 +24,16 @@
             <li class="navbar-li"><a href="About.html" class="navbar-links">About</a></li>
         </ul>
     </div>
-    <div>
+    <div class="room-div">
         <a id="single-unit"></a>
         <h2>Single Bedroom Unit</h2>
-        <div>
+        <div class="price-text">
             <p>Per night</p>
             <span class="price-before">NZ$170</span>
             NZ$<span class="price" id="single-price">155</span>
-            <a href="Booking.html">Reserve</a>
+            <a href="Booking.html" class="link-button">Reserve</a>
         </div>
-        <img src="../images/singe-bedroom.jpg" alt="Single bedroom unit" class="img-room">
+        <img src="../images/singe-bedroom.jpg" alt="Single bedroom unit" class="img-room" align="left">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat quam in iaculis sodales. Proin pulvinar lorem in diam lobortis elementum.            Suspendisse bibendum condimentum neque tempor auctor. Vestibulum imperdiet eros est, vitae porta lorem blandit in. Curabitur quis nisl tellus. Aliquam             quis metus consectetur sem eleifend mattis ac non leo. Morbi facilisis ornare velit, in imperdiet urna bibendum in.</p>
         <p><strong>Unit Size:</strong> 35m<sup>2</sup></p>
         <p><strong>Bedroom 1:</strong> 1 single bed</p>
@@ -54,18 +55,17 @@
                 <li>Free Wifi</li>
             </ul>
         </div>
-
     </div>
-    <div>
+    <div class="room-div">
         <a id="double-unit"></a>
         <h2>Double Bedroom Unit</h2>
-        <div>
+        <div class="price-text">
             <p>Per night</p>
             <span class="price-before">NZ$220</span>
             NZ$<span class="price" id="double-price">200</span>
-            <a href="Booking.html">Reserve</a>
+            <a href="Booking.html" class="link-button">Reserve</a>
         </div>
-        <img src="../images/double-bed.jpg" alt="Double bedroom unit" class="img-room">
+        <img src="../images/double-bed.jpg" alt="Double bedroom unit" class="img-room" align="left">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat quam in iaculis sodales. Proin pulvinar lorem in diam lobortis elementum.              Suspendisse bibendum condimentum neque tempor auctor. Vestibulum imperdiet eros est, vitae porta lorem blandit in. Curabitur quis nisl tellus. Aliquam             quis metus consectetur sem eleifend mattis ac non leo. Morbi facilisis ornare velit, in imperdiet urna bibendum in. Proin pharetra aliquet tortor ut               euismod. Sed scelerisque, leo vitae dapibus condimentum, lectus libero porta erat, non iaculis velit orci eget erat. Suspendisse aliquam sem sem,                  sit amet pretium lectus molestie sit amet.</p>
         <p><strong>Unit Size:</strong> 45m<sup>2</sup></p>
         <p><strong>Bedroom 1:</strong> 1 double bed</p>
@@ -92,16 +92,16 @@
             </ul>
         </div>
     </div>
-    <div>
+    <div class="room-div">
         <a id="studio-unit"></a>
         <h2>Studio</h2>
-        <div>
+        <div class="price-text">
             <p>Per night</p>
             <span class="price-before">NZ$250</span>
             NZ$<span class="price" id="studio-price">225</span>
-            <a href="Booking.html">Reserve</a>
+            <a href="Booking.html" class="link-button">Reserve</a>
         </div>
-        <img src="../images/studio.jpg" alt="Studio unit" class="img-room">
+        <img src="../images/studio.jpg" alt="Studio unit" class="img-room" align="left">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse volutpat quam in iaculis sodales. Proin pulvinar lorem in diam lobortis elementum. Suspendisse bibendum condimentum neque tempor auctor. Vestibulum imperdiet eros est, vitae porta lorem blandit in. Curabitur quis nisl tellus. Aliquam quis metus consectetur sem eleifend mattis ac non leo. Morbi facilisis ornare velit, in imperdiet urna bibendum in. Proin pharetra aliquet tortor ut euismod. Sed scelerisque, leo vitae dapibus condimentum, lectus libero porta erat, non iaculis velit orci eget erat. Suspendisse aliquam sem sem, sit amet pretium lectus molestie sit amet. Curabitur maximus, libero id mattis laoreet, turpis dui consequat metus, laoreet vulputate lacus diam vitae risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt nulla eget suscipit ultricies. Vivamus faucibus ipsum tincidunt mattis venenatis. Praesent vehicula pharetra ante tempor rutrum. Duis pulvinar non enim vel tincidunt.</p>
         <p><strong>Unit Size:</strong> 55m<sup>2</sup></p>
         <p><strong>Suite 1:</strong> 1 king bed</p>
@@ -134,6 +134,5 @@
             </ul>
         </div>
     </div>
-
 </body>
 </html>
