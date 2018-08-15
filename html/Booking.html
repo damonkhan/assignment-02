@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookings | Treehut</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/master.css">
 </head>
 <body id="booking-body">
@@ -24,11 +25,13 @@
             <li class="navbar-li"><a href="About.html" class="navbar-links">About</a></li>
         </ul>
     </div>
-    <h2 id="booking-blurb">Secure your room in less than 2 minutes!</h2>
     <div>
-        <form action="">
+        <form method="get">
             <div class="form-divs">
-                <h3>Details</h3>
+                <h2 id="booking-blurb">Secure your room in less than 2 minutes!</h2>
+                <div id="details-div">
+                    <h3><i class="fas fa-user-alt"></i>Details</h3>
+                </div>
                 <div>
                     <label for="title">Title</label>
                     <select name="title" id="title" title="Title">
@@ -43,7 +46,6 @@
                 <div>
                     <input id="last-name" type="text" placeholder="Last name" required>
                 </div>
-                <h3>Contact info</h3>
                 <div>
                     <input id="email" type="email" placeholder="Email address" required>
                 </div>
@@ -52,7 +54,7 @@
                 </div>
             </div>
             <div class="form-divs">
-                <h3>Lodging</h3>
+                <h3><i class="fas fa-home"></i>Lodging</h3>
                 <select name="room-type" id="room-type" title="Select a room">
                     <option value="none">Select unit type</option>
                     <option value="single">Single Bedroom Unit</option>
@@ -61,7 +63,7 @@
                 </select>
             </div>
             <div class="form-divs">
-                <h3>Dates</h3>
+                <h3><i class="fas fa-calendar-alt"></i>Dates</h3>
                 <div id="date-div">
                     <label for="check-in">Check In Date</label>
                     <input type="date" id="check-in" title="Check-in Date" data-date="" data-date-format="DD-MM-YYYY">
@@ -149,7 +151,7 @@
             </div>
             <div class="form-divs">
                 <div id="total-div">
-                    <span id="pricing"><h2>Total: $<span id="total">0</span>.00</h2></span>
+                    <div id="pricing"><h2>Total: $<span id="total">0</span>.00</h2></div>
                 </div>
             </div>
             <div class="form-divs">
@@ -159,6 +161,6 @@
             </div>
         </form>
     </div>
-    <script type="text/javascript" src="../js/Booking.js" async></script>
+    <script src="../js/Booking.js" async></script>
 </body>
 </html>

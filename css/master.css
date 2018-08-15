@@ -4,6 +4,7 @@ body {
     margin: 0;
 }
 
+h1,
 h2,
 h3 {
     color: #536d83;
@@ -23,8 +24,9 @@ input[type="submit"] {
     background-color: #f4d742;
     border-radius: 5px;
     display: block;
-    height: 2.5em;
     float: right;
+    font-weight: bold;
+    height: 2.5em;
 }
 
 input[type="text"],
@@ -51,22 +53,30 @@ label {
 
 #wrapper {
     background: #0ae145;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
 }
 
 
 #hero-image,
-.img-room,
-.img-activities {
+.img-room {
     height: 400px;
     width: 600px;
 }
 
+.img-activities {
+    height: 250px;
+}
+
 .price-before {
     text-decoration: line-through;
+    vertical-align: sub;
 }
 
 .price {
+    color: #2f7000;
+    font-size: 29px;
     font-weight: bold;
+    vertical-align: text-top;
 }
 
 .hidden {
@@ -137,8 +147,6 @@ img {
 
 /* Fading animation */
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: .5s;
     animation-name: fade;
     animation-duration: .5s;
 }
@@ -233,7 +241,7 @@ li.dropdown {
 }
 
 .ratings-span {
-    margin: 0 30px;
+    margin: 0 30px 0 10px;
 }
 
 .main-text-content {
@@ -261,9 +269,7 @@ li.dropdown {
 #booking-blurb {
     display: block;
     text-align: left;
-    margin: auto;
-    padding: 25px;
-    width: 35%;
+    margin: 0 0 30px 0;
 }
 
 #booking-body {
@@ -282,10 +288,14 @@ li.dropdown {
     margin-right: 25px;
 }
 
-form input,
 form select {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
+
+form input {
+    margin-bottom: 25px;
+}
+
 
 #index-div, #ratings-wrapper, .room-div, .activities-div, .about-div {
     background-color: #fff;
@@ -297,6 +307,7 @@ form select {
 }
 
 .img-room {
+    float: left;
     margin-top: 20px;
     margin-right: 20px;
 }
@@ -305,13 +316,18 @@ form select {
     text-align: right;
 }
 
+.price-text p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 .link-button {
     background-color: #f4d742;
-    border: 1px solid #f4d742;
     border-radius: 5px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
     font-weight: bold;
-    margin-left: 25px;
+    margin-left: 12px;
     padding: 10px;
     text-decoration: none;
 }
@@ -321,15 +337,16 @@ form select {
 }
 
 .link-button:hover {
-    border: 1px solid #e0c53c;
     background-color: #e0c53c;
 }
 
 .activities-div {
-    height: 530px;
+    height: 365px;
+    width: 70%;
 }
 
 .img-activities {
+    float: left;
     margin-right: 20px;
 }
 
@@ -343,4 +360,32 @@ form select {
 
 #room-type {
     width: 335px;
+}
+
+.fa-star {
+    color: #e8cc3c;
+}
+
+.fa-blogger {
+    color: darkblue;
+}
+
+h3 i,
+h2 i {
+    margin-right: 7px;
+}
+
+.room-title {
+    float: left;
+    font-size: 28px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.ul-room-facilities {
+    column-count: 2;
+}
+
+#studio-ul {
+    column-count: 3;
 }
