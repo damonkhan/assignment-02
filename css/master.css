@@ -28,10 +28,29 @@ input[type="submit"] {
     background-color: #f4d742;
     border-radius: 5px;
     display: block;
-    float: right;
+    float: left;
     font-weight: bold;
     height: 2.5em;
+    outline: none;
 }
+
+input[type="reset"] {
+    float: right;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    margin-bottom: 0;
+}
+
+input[type="submit"]:hover,
+input[type="date"]:hover,
+input[type="reset"]:hover,
+input[type="checkbox"]:hover,
+select:hover {
+    cursor: pointer;
+}
+
 
 input[type="text"],
 input[type="email"],
@@ -266,6 +285,10 @@ li.dropdown {
     width: 100%;
 }
 
+.form-divs {
+    overflow: auto;
+}
+
 .form-divs, #index-div {
     background-color: #fff;
     box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
@@ -311,6 +334,7 @@ form input {
     box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
     display: block;
     margin: 20px auto;
+    overflow: auto;
     padding: 25px;
     width: 80%;
 }
@@ -340,6 +364,7 @@ form input {
     background-color: #f4d742;
     border-radius: 5px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    color: #000;
     font-weight: bold;
     margin-left: 12px;
     padding: 10px;
