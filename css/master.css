@@ -471,6 +471,10 @@ textarea {
     color: orange;
 }
 
+.required {
+    font-size: 12px;
+}
+
 .required:after {
     content: '*';
     color: red;

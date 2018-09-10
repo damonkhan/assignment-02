@@ -55,7 +55,7 @@
                 </div>
                 <div>
                     <label for="contact-number" class="required">Contact Number</label>
-                    <input id="contact-number" type="number" placeholder="Contact number">
+                    <input id="contact-number" type="number" placeholder="Contact number" required>
                 </div>
             </div>
             <div class="form-divs">
@@ -70,20 +70,20 @@
             <div class="form-divs">
                 <h3><i class="fas fa-calendar-alt"></i>Dates</h3>
                 <div id="date-div">
-                    <label for="check-in">Check In Date</label>
-                    <input type="date" id="check-in" title="Check-in Date" data-date="" data-date-format="DD-MM-YYYY">
+                    <label for="check-in" class="required">Check In Date</label>
+                    <input type="date" id="check-in" title="Check-in Date" required>
                 </div>
                 <div>
-                    <label for="check-out">Check Out Date</label>
-                    <input type="date" id="check-out" title="Check-out Date">
+                    <label for="check-out" class="required">Check Out Date</label>
+                    <input type="date" id="check-out" title="Check-out Date" required>
                 </div>
                 <div id="date-error" class="hidden">
                     <!--Used to display date-related error messages-->
                     <p id="error-message"></p>
                 </div>
                 <div id="arrival" class="hidden">
-                    <label for="arrive-time">Arrival Time</label>
-                    <select name="arrival-time" id="arrive-time" title="Arrival time">
+                    <label for="arrive-time" class="required">Arrival Time</label>
+                    <select name="arrival-time" id="arrive-time" title="Arrival time" required>
                         <option value="time" selected>Select time</option>
                         <option value="10:00">10:00</option>
                         <option value="10:00">10:30</option>
