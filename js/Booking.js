@@ -14,6 +14,8 @@ let adults = document.querySelector("#num-adults");
 let child = document.querySelector("#num-children");
 let breakfast = document.querySelector("#checkbox-breakfast");
 let reset = document.querySelector("#reset");
+let submitBtn = document.querySelector('#submitBtn');
+let blankMsg = " Cannot be left blank";
 
 /*
 *displays arrival time dropdown once check-in and check-out dates set
@@ -93,7 +95,6 @@ function getNumNights() {
 /*
 * Calculates the total cost based on:
 * Unit type, num nights, num rooms, num adults, num children, breakfast (optional)
-* @textContent: Total cost
  */
 function calculateCost() {
     let unitType = document.querySelector("#room-type").value;
@@ -126,6 +127,43 @@ function calculateCost() {
     }
 }
 
+function validateFName() {
+
+}
+
+/*
+* Checks all required inputs are not left blank.
+* @return: true if blank, false otherwise.
+ */
+function checkRequiredInputs() {
+
+    // get arr of all required input
+    let req = document.getElementsByClassName('req-input');
+
+    for (var i = 0; i < req.length; i++) {
+        if(req[i].value === "") {
+            // display err message next to offending element
+            displayErrorMessage(req[i], blankMsg);
+            return true;
+        }
+    }
+    return false;
+}
+
+function displayErrorMessage(element, msg) {
+    let errElement = document.createElement("span");
+    errElement.textContent = msg;
+    errElement.style.color = 'red';
+    element.parentNode.insertBefore(errElement, element.nextSibling);
+    element.style.border = "1px solid red";
+}
+
+function validator() {
+    if (checkRequiredInputs()) {
+        document.querySelector('#first-name').focus();
+    }
+
+}
 
 // Unobtrusive JavaScript
 checkIn.addEventListener("change", setCheckOutDate);
@@ -139,6 +177,7 @@ adults.addEventListener("change", calculateCost);
 child.addEventListener("change", calculateCost);
 breakfast.addEventListener("change", calculateCost);
 rooms.addEventListener("change", calculateCost);
+submitBtn.addEventListener("click", validator);
 reset.addEventListener("click", function () { document.querySelector("#total").textContent = "0";} );
 
 

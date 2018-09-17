@@ -27,7 +27,7 @@
         </ul>
     </div>
     <div>
-        <form method="get">
+        <form method="get" id="payment-form">
             <div class="form-divs">
                 <h2 id="booking-blurb">Secure your room in less than 2 minutes!</h2>
                 <div id="details-div">
@@ -43,19 +43,19 @@
                 </div>
                 <div id="first-name-div">
                     <label for="first-name" class="required">First Name</label>
-                    <input id="first-name" type="text" placeholder="First name" required>
+                    <input id="first-name" class="req-input" type="text" placeholder="First name" required>
                 </div>
                 <div>
                     <label for="last-name" class="required">Last Name</label>
-                    <input id="last-name" type="text" placeholder="Last name" required>
+                    <input id="last-name" class="req-input" type="text" placeholder="Last name" required>
                 </div>
                 <div>
                     <label for="email" class="required">Email</label>
-                    <input id="email" type="email" placeholder="Email address" required>
+                    <input id="email" class="req-input" type="email" placeholder="Email address" required>
                 </div>
                 <div>
                     <label for="contact-number" class="required">Contact Number</label>
-                    <input id="contact-number" type="number" placeholder="Contact number" required>
+                    <input id="contact-number" class="req-input" type="number" placeholder="Contact number" required>
                 </div>
             </div>
             <div class="form-divs">
@@ -71,11 +71,11 @@
                 <h3><i class="fas fa-calendar-alt"></i>Dates</h3>
                 <div id="date-div">
                     <label for="check-in" class="required">Check In Date</label>
-                    <input type="date" id="check-in" title="Check-in Date" required>
+                    <input type="date" class="req-input" id="check-in" title="Check-in Date" required>
                 </div>
                 <div>
                     <label for="check-out" class="required">Check Out Date</label>
-                    <input type="date" id="check-out" title="Check-out Date" required>
+                    <input type="date" id="check-out" class="req-input" title="Check-out Date" required>
                 </div>
                 <div id="date-error" class="hidden">
                     <!--Used to display date-related error messages-->
@@ -83,7 +83,7 @@
                 </div>
                 <div id="arrival" class="hidden">
                     <label for="arrive-time" class="required">Arrival Time</label>
-                    <select name="arrival-time" id="arrive-time" title="Arrival time" required>
+                    <select name="arrival-time" id="arrive-time" class="req-input" title="Arrival time" required>
                         <option value="time" selected>Select time</option>
                         <option value="10:00">10:00</option>
                         <option value="10:00">10:30</option>
@@ -162,7 +162,7 @@
             <div class="form-divs">
                 <p>By completing this booking, you agree to our <a href="javascript:void(0)" style="text-decoration:none">Terms of Use</a> and <a href="javascript:void(0)" style="text-decoration:none">Room regulations</a></p>
                 <input type="reset" value="Clear" id="reset">
-                <input type="submit" value="Complete booking">
+                <button type="button" id="submitBtn">Submit</button>
             </div>
         </form>
     </div>
