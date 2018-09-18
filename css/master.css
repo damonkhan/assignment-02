@@ -480,3 +480,10 @@ textarea {
     color: red;
 }
 
+.card {
+	width: 40px;
+}
+
+.expiry {
+	width: 30px;
+}

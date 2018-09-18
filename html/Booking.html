@@ -41,21 +41,31 @@
                         <option value="Mrs.">Mrs.</option>
                     </select>
                 </div>
-                <div id="first-name-div">
-                    <label for="first-name" class="required">First Name</label>
-                    <input id="first-name" class="req-input" type="text" placeholder="First name" required>
-                </div>
                 <div>
-                    <label for="last-name" class="required">Last Name</label>
-                    <input id="last-name" class="req-input" type="text" placeholder="Last name" required>
-                </div>
-                <div>
-                    <label for="email" class="required">Email</label>
-                    <input id="email" class="req-input" type="email" placeholder="Email address" required>
-                </div>
-                <div>
-                    <label for="contact-number" class="required">Contact Number</label>
-                    <input id="contact-number" class="req-input" type="number" placeholder="Contact number" required>
+	                <div id="first-name-div">
+	                    <label for="first-name" class="required">First Name</label>
+	                    <input id="first-name" class="req-input" type="text" placeholder="First name" required>
+	                </div>
+	                <div>
+	                    <label for="last-name" class="required">Last Name</label>
+	                    <input id="last-name" class="req-input" type="text" placeholder="Last name" required>
+	                </div>
+					<div>
+	                    <label for="line1" class="required">Address</label>
+	                    <input id="line1" class="req-input" type="text" placeholder="Address line 1" required>
+	                    <input id="line2" class="req-input" type="text" placeholder="Address line 2" required>
+	                    <input id="city" class="req-input address" type="text" placeholder="City" required>
+	                    <input id="state" class="address" type="text" placeholder="State">
+	                    <input id="postal" class="req-input adress" type="text" placeholder="Post Code" size="4" maxlength="4" required>
+	                </div>
+					<div>
+	                    <label for="contact-number" class="required">Contact Number</label>
+	                    <input id="contact-number" class="req-input" type="number" placeholder="Contact number" required>
+	                </div>
+	                <div>
+	                    <label for="email" class="required">Email</label>
+	                    <input id="email" class="req-input" type="email" placeholder="Email address" required>
+	                </div>
                 </div>
             </div>
             <div class="form-divs">
@@ -163,6 +173,26 @@
                 <p>By completing this booking, you agree to our <a href="javascript:void(0)" style="text-decoration:none">Terms of Use</a> and <a href="javascript:void(0)" style="text-decoration:none">Room regulations</a></p>
                 <input type="reset" value="Clear" id="reset">
                 <button type="button" id="submitBtn">Submit</button>
+            </div>
+            <div class="form-divs">
+            	<div id="payment">
+            		<h3><i class="fas fa-credit-card"></i> Payment</h3>
+					<label class="required">Card Type</label>
+	                <input type="radio" name="card" value="visa" id="visa"/><img class="card" src="../images/visa.png" /> 
+	                <input type="radio" name="card" value="mastercard" id="master"/><img class="card" src="../images/mastercard.png" />
+	                <input type="radio" name="card" value="amex" id="amex"/><img class="card" src="../images/amex.png" />
+	                <input type="radio" name="card" value="discover" id="discover"/><img class="card" src="../images/discover.png" />
+	                
+	                <label class="required">Card Number</label>
+	                <input type="text" class="req-input" placeholder="Card Number">
+	                <label class="required">CSC</label>
+	                <input type="text" class="req-input" placeholder="CSC">
+	                <label class="required">Expiry Date</label>
+	                <input type="text" class="req-input expiry" placeholder="MM" min="2" maxlength="2"> / <input type="text" class="req-input expiry" placeholder="YY" min="2" maxlength="2">
+                
+				</div>
+				<input type="reset" value="Cancel" id="reset">
+                <button type="button" id="payBtn">Pay now</button>
             </div>
         </form>
     </div>

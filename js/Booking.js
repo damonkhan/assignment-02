@@ -151,6 +151,11 @@ function checkRequiredInputs() {
 }
 
 function displayErrorMessage(element, msg) {
+	// check if message already being displayed
+	if( element.nextSibling.tagName === "SPAN" && element.nextSibling.textContent.trim === msg.trim) {
+		return;
+	}
+	// create an error element to display
     let errElement = document.createElement("span");
     errElement.textContent = msg;
     errElement.style.color = 'red';
@@ -160,10 +165,13 @@ function displayErrorMessage(element, msg) {
 
 function validator() {
     if (checkRequiredInputs()) {
+    	// scroll back to the top of the page
         document.querySelector('#first-name').focus();
     }
 
 }
+
+
 
 // Unobtrusive JavaScript
 checkIn.addEventListener("change", setCheckOutDate);
