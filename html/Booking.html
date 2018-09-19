@@ -169,31 +169,32 @@
                     <div id="pricing"><h2>Total: $<span id="total">0</span>.00</h2></div>
                 </div>
             </div>
-            <div class="form-divs">
+            <div class="form-divs" id="payment-div">
+                <div id="payment">
+                    <h3><i class="fas fa-credit-card"></i> Secure Booking</h3>
+                    <label class="required">Card Type</label>
+                    <input type="radio" name="card" value="visa" id="visa"/><img class="card" src="../images/visa.png" />
+                    <input type="radio" name="card" value="mastercard" id="master"/><img class="card" src="../images/mastercard.png" />
+                    <input type="radio" name="card" value="amex" id="amex"/><img class="card" src="../images/amex.png" />
+                    <input type="radio" name="card" value="discover" id="discover"/><img class="card" src="../images/discover.png" />
+
+                    <label class="required">Card Number</label>
+                    <input id="ccnum" type="text" class="" placeholder="Card Number" min="16" maxlength="16">
+                    <label class="required ">CSC</label>
+                    <input id="cscnum" type="text" class="" placeholder="CSC" min="3" maxlength="3">
+                    <label class="required">Expiry Date</label>
+                    <input id="month" type="text" class=" expiry cc-label" placeholder="MM" min="2" maxlength="2"> / <input id="year" type="text" class=" expiry cc-label" placeholder="YY" min="2" maxlength="2">
+
+                </div>
+                <input type="reset" value="Cancel" id="cancel">
+                <button type="button" id="payBtn">Pay now</button>
+            </div>
+            <div class="form-divs" id="submit-div">
                 <p>By completing this booking, you agree to our <a href="javascript:void(0)" style="text-decoration:none">Terms of Use</a> and <a href="javascript:void(0)" style="text-decoration:none">Room regulations</a></p>
                 <input type="reset" value="Clear" id="reset">
                 <button type="button" id="submitBtn">Submit</button>
             </div>
-            <div class="form-divs">
-            	<div id="payment">
-            		<h3><i class="fas fa-credit-card"></i> Secure Booking</h3>
-					<label class="required">Card Type</label>
-	                <input type="radio" name="card" value="visa" id="visa"/><img class="card" src="../images/visa.png" /> 
-	                <input type="radio" name="card" value="mastercard" id="master"/><img class="card" src="../images/mastercard.png" />
-	                <input type="radio" name="card" value="amex" id="amex"/><img class="card" src="../images/amex.png" />
-	                <input type="radio" name="card" value="discover" id="discover"/><img class="card" src="../images/discover.png" />
-	                
-	                <label class="required">Card Number</label>
-	                <input id="ccnum" type="text" class="req-input" placeholder="Card Number" min="16" maxlength="16">
-	                <label class="required">CSC</label>
-	                <input id="cscnum" type="text" class="req-input" placeholder="CSC" min="3" maxlength="3">
-	                <label class="required">Expiry Date</label>
-	                <input id="month" type="text" class="req-input expiry" placeholder="MM" min="2" maxlength="2"> / <input id="year" type="text" class="req-input expiry" placeholder="YY" min="2" maxlength="2">
-                
-				</div>
-				<input type="reset" value="Cancel" id="cancel">
-                <button type="button" id="payBtn">Pay now</button>
-            </div>
+
         </form>
     </div>
     <script src="../js/Booking.js" async></script>

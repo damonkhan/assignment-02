@@ -193,12 +193,18 @@ function checkRequiredInputs() {
 }
 
 function displayErrorMessage(element, msg) {
+
+    if (document.getElementById('errElement') !== null) {
+        document.getElementById('errElement').remove();
+    }
+
     // check if message already being displayed
     if( element.nextSibling.tagName === "SPAN" && element.nextSibling.textContent.trim === msg.trim) {
         return;
     }
     // create an error element to display
     let errElement = document.createElement("span");
+    errElement.setAttribute('id', 'errElement');
     errElement.textContent = msg;
     errElement.style.color = 'red';
     element.parentNode.insertBefore(errElement, element.nextSibling);
@@ -209,6 +215,10 @@ function validator() {
     if (checkRequiredInputs()) {
     	// scroll back to the top of the page
         document.querySelector('#first-name').focus();
+    } else {
+        document.getElementById('payment-div').style.display = 'block';
+        document.getElementById('submit-div').style.display = 'none';
+        document.getElementById('payBtn').focus();
     }
 
 }
@@ -228,6 +238,7 @@ child.addEventListener("change", calculateCost);
 breakfast.addEventListener("change", calculateCost);
 rooms.addEventListener("change", calculateCost);
 submitBtn.addEventListener("click", validator);
+//submitBtn.addEventListener("click", validateCCNums);
 reset.addEventListener("click", function () { document.querySelector("#total").textContent = "0";} );
 
 

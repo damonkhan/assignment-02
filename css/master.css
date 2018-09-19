@@ -487,3 +487,13 @@ textarea {
 .expiry {
 	width: 30px;
 }
+
+.cc-label {
+    width: unset;
+}
+
+#payment-div {
+    /* initially hidden on pagee */
+    display: none;
+}
+
