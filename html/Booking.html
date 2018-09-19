@@ -184,14 +184,14 @@
 	                <input type="radio" name="card" value="discover" id="discover"/><img class="card" src="../images/discover.png" />
 	                
 	                <label class="required">Card Number</label>
-	                <input type="text" class="req-input" placeholder="Card Number">
+	                <input id="ccnum" type="text" class="req-input" placeholder="Card Number" min="16" maxlength="16">
 	                <label class="required">CSC</label>
-	                <input type="text" class="req-input" placeholder="CSC">
+	                <input id="cscnum" type="text" class="req-input" placeholder="CSC" min="3" maxlength="3">
 	                <label class="required">Expiry Date</label>
-	                <input type="text" class="req-input expiry" placeholder="MM" min="2" maxlength="2"> / <input type="text" class="req-input expiry" placeholder="YY" min="2" maxlength="2">
+	                <input id="month" type="text" class="req-input expiry" placeholder="MM" min="2" maxlength="2"> / <input id="year" type="text" class="req-input expiry" placeholder="YY" min="2" maxlength="2">
                 
 				</div>
-				<input type="reset" value="Cancel" id="reset">
+				<input type="reset" value="Cancel" id="cancel">
                 <button type="button" id="payBtn">Pay now</button>
             </div>
         </form>

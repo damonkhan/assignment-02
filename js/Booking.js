@@ -132,6 +132,48 @@ function validateFName() {
 }
 
 /*
+* Check that the postal code is valid number
+ */
+function validatePostalCode() {
+    // get the postal code as a number
+    let number = Number(document.getElementById('postal').value);
+    let msg = " Invalid post code";
+
+    if (!(number >= 0 && number <= 9999)) {
+        displayErrorMessage(document.getElementById('postal'), msg);
+        return false;
+    }
+    // valid
+    return true;
+}
+
+function validateCCNums() {
+    let msg = "";
+
+    if(Number(document.getElementById('ccnum').value) < 0 || Number(document.getElementById('ccnum').value) > 9999999999999999) {
+        msg = " Invalid card number";
+        displayErrorMessage(document.getElementById('ccnum'), msg);
+        return false;
+    } else if (Number(document.getElementById('cscnum').value) < 0 || Number(document.getElementById('cscnum').value) > 999) {
+        msg = " Invalid csc number";
+        displayErrorMessage(document.getElementById('cscnum'), msg);
+        return false;
+    } else if (Number(document.getElementById('month').value) === 0 || Number(document.getElementById('month').value) > 12) {
+        msg = " Invalid month";
+        displayErrorMessage(document.getElementById('month'), msg);
+        return false;
+    } else if (Number(document.getElementById('year').value) === 0 || Number(document.getElementById('year').value) > 99) {
+        msg = " Invalid year";
+        displayErrorMessage(document.getElementById('year'), msg);
+        return false;
+    }
+
+    console.log("CC info valid");
+    return true;
+}
+
+
+/*
 * Checks all required inputs are not left blank.
 * @return: true if blank, false otherwise.
  */
@@ -151,11 +193,11 @@ function checkRequiredInputs() {
 }
 
 function displayErrorMessage(element, msg) {
-	// check if message already being displayed
-	if( element.nextSibling.tagName === "SPAN" && element.nextSibling.textContent.trim === msg.trim) {
-		return;
-	}
-	// create an error element to display
+    // check if message already being displayed
+    if( element.nextSibling.tagName === "SPAN" && element.nextSibling.textContent.trim === msg.trim) {
+        return;
+    }
+    // create an error element to display
     let errElement = document.createElement("span");
     errElement.textContent = msg;
     errElement.style.color = 'red';
