@@ -137,12 +137,38 @@ function calculateCost() {
 }
 
 function validateFName() {
-
+	let regex = /[^a-zA-Z ]/;
+	fName = document.getElementById('first-name');
+	let result = regex.test(fName.value);
+	if (result) {
+		let msg = " First name contains invalid characters";
+		displayErrorMessage(fName, msg);
+	}
+	return result;
 }
 
-/*
-* Check that the postal code is valid number
- */
+function validateLName() {
+	let regex = /[^a-zA-Z ]/;
+	lName = document.getElementById('last-name');
+	let result = regex.test(lName.value);
+	if (result) {
+		let msg = " Last name contains invalid characters";
+		displayErrorMessage(lName, msg);
+	}
+	return result;
+}
+
+function validateCity() {
+	let regex = /[^a-zA-Z ]/;
+	city = document.getElementById('city');
+	let result = regex.test(city.value);
+	if (result) {
+		let msg = " Name contains invalid characters";
+		displayErrorMessage(city, msg);
+	}
+	return result;
+}
+
 function validatePostalCode() {
     // get the postal code as a number
     let number = Number(document.getElementById('postal').value);
@@ -150,11 +176,23 @@ function validatePostalCode() {
 
     if (!(number >= 0 && number <= 9999)) {
         displayErrorMessage(document.getElementById('postal'), msg);
-        return false;
+        return true;
     }
     // valid
-    return true;
+    return false;
 }
+
+function validateEmail() {
+	let regex = /^\w+@[a-z]+(\.[a-z]+)+$/; 
+	email = document.getElementById('email');
+	let result = regex.test(email.value);
+	if (!result) {
+		let msg = " Email contains invalid characters";
+		displayErrorMessage(email, msg);
+	}
+	return !result;
+}
+
 
 function validateCCNums() {
     let msg = "";
@@ -224,7 +262,17 @@ function validator() {
     if (checkRequiredInputs()) {
     	// scroll back to the top of the page
         document.querySelector('#first-name').focus();
-    } else {
+    } else if(validateFName()) {
+    	document.querySelector('#first-name').focus();
+    } else if(validateLName()) {
+    	document.querySelector('#last-name').focus();
+    } else if(validateCity()) {
+    	document.querySelector('#city').focus();
+    } else if(validateEmail()) {
+    	document.querySelector('#email').focus();
+    } else if(validatePostalCode()) {
+    	document.querySelector('#postal').focus();
+    }else {
     	let div = document.getElementById('payment-div');
     	div.style.opacity=0;
         opacity = 0;
