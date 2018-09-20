@@ -15,6 +15,7 @@ let child = document.querySelector("#num-children");
 let breakfast = document.querySelector("#checkbox-breakfast");
 let reset = document.querySelector("#reset");
 let submitBtn = document.querySelector('#submitBtn');
+let payBtn = document.querySelector('#payBtn');
 let blankMsg = " Cannot be left blank";
 let repeater;
 let opacity = 0;
@@ -193,6 +194,46 @@ function validateEmail() {
 	return !result;
 }
 
+function validateCardNum() {
+	ccNum = document.getElementById('ccnum');
+	if (isNaN(ccNum.value)) {
+		let msg = " Invalid card number";
+		displayErrorMessage(ccNum, msg);
+		return true;
+	}
+	return false;
+}
+
+function validateCSC() {
+	cscNum = document.getElementById('cscnum');
+	if (isNaN(cscNum.value)) {
+		let msg = " Invalid CSC number";
+		displayErrorMessage(cscNum, msg);
+		return true;
+	}
+	return false;
+}
+
+function validateMM() {
+	month = document.getElementById('month');
+	if (isNaN(month.value)) {
+		let msg = " Invalid month";
+		displayErrorMessage(month, msg);
+		return true;
+	}
+	return false;
+}
+
+function validateYY() {
+	year = document.getElementById('year');
+	if (isNaN(year.value)) {
+		let msg = " Invalid year";
+		displayErrorMessage(year, msg);
+		return true;
+	}
+	return false;
+}
+
 
 function validateCCNums() {
     let msg = "";
@@ -200,23 +241,23 @@ function validateCCNums() {
     if(Number(document.getElementById('ccnum').value) < 0 || Number(document.getElementById('ccnum').value) > 9999999999999999) {
         msg = " Invalid card number";
         displayErrorMessage(document.getElementById('ccnum'), msg);
-        return false;
+        return true;
     } else if (Number(document.getElementById('cscnum').value) < 0 || Number(document.getElementById('cscnum').value) > 999) {
         msg = " Invalid csc number";
         displayErrorMessage(document.getElementById('cscnum'), msg);
-        return false;
+        return true;
     } else if (Number(document.getElementById('month').value) === 0 || Number(document.getElementById('month').value) > 12) {
         msg = " Invalid month";
         displayErrorMessage(document.getElementById('month'), msg);
-        return false;
+        return true;
     } else if (Number(document.getElementById('year').value) === 0 || Number(document.getElementById('year').value) > 99) {
         msg = " Invalid year";
         displayErrorMessage(document.getElementById('year'), msg);
-        return false;
+        return true;
     }
 
     console.log("CC info valid");
-    return true;
+    return false;
 }
 
 
@@ -258,7 +299,7 @@ function displayErrorMessage(element, msg) {
     element.style.border = "1px solid red";
 }
 
-function validator() {
+function detailsValidator() {
     if (checkRequiredInputs()) {
     	// scroll back to the top of the page
         document.querySelector('#first-name').focus();
@@ -283,6 +324,22 @@ function validator() {
         document.getElementById('payBtn').focus();
     }
 
+}
+
+function ccValidator() {
+	if (validateCardNum()) {
+		document.getElementById('ccnum').focus();
+	} else if (validateCCNums()) {
+		document.getElementById('cscnum').focus();
+	} else if (validateCSC()) {
+		document.getElementById('cscnum').focus();
+	} else if (validateMM()) {
+		document.getElementById('month').focus();
+	} else if (validateYY()) {
+		document.getElementById('year').focus();
+	} else {
+		document.getElementById('bookingForm').submit();
+	}
 }
 
 // code block comes from Vimal Kumar, COMPX222
@@ -341,8 +398,8 @@ adults.addEventListener("change", calculateCost);
 child.addEventListener("change", calculateCost);
 breakfast.addEventListener("change", calculateCost);
 rooms.addEventListener("change", calculateCost);
-submitBtn.addEventListener("click", validator);
-//submitBtn.addEventListener("click", validateCCNums);
+submitBtn.addEventListener("click", detailsValidator);
+payBtn.addEventListener("click", ccValidator);
 reset.addEventListener("click", function () { document.querySelector("#total").textContent = "0";} );
 
 
