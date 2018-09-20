@@ -16,6 +16,10 @@ let breakfast = document.querySelector("#checkbox-breakfast");
 let reset = document.querySelector("#reset");
 let submitBtn = document.querySelector('#submitBtn');
 let blankMsg = " Cannot be left blank";
+let repeater;
+let opacity = 0;
+let increments = 100;
+let increment_value = 1/increments;
 
 /*
 *displays arrival time dropdown once check-in and check-out dates set
@@ -216,13 +220,60 @@ function validator() {
     	// scroll back to the top of the page
         document.querySelector('#first-name').focus();
     } else {
-        document.getElementById('payment-div').style.display = 'block';
+    	let div = document.getElementById('payment-div');
+    	div.style.opacity=0;
+        opacity = 0;
+        fadeNode = div;
+        fadeIn(500);
+        div.style.display="block";
         document.getElementById('submit-div').style.display = 'none';
         document.getElementById('payBtn').focus();
     }
 
 }
 
+// code block comes from Vimal Kumar, COMPX222
+function fadeIn(duration) {
+     var interval = duration/increments;
+     repeater = setInterval(increaseOpacity, interval);
+}
+
+function increaseOpacity() 
+{
+    
+    if (opacity < 1.0) 
+    {
+        opacity = opacity + increment_value;
+        fadeNode.style.opacity = opacity;
+    } 
+    else 
+    {
+        clearInterval(repeater);
+    }
+}
+
+function fadeOut(duration)
+{
+
+     var interval = duration/increments;
+     repeater = setInterval(decreaseOpacity, interval);
+    
+}
+
+function decreaseOpacity() 
+{
+    
+    if (opacity > 0) 
+    {
+        opacity = opacity - increment_value;
+        fadeNode.style.opacity = opacity;
+    } 
+    else 
+    {
+        fadeNode.style.display="none";
+        clearInterval(repeater);
+    }
+}
 
 
 // Unobtrusive JavaScript
