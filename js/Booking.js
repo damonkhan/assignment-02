@@ -27,7 +27,12 @@ let increment_value = 1/increments;
 function checkDates() {
     // check that date inputs are not set to default values
     if (checkIn.value !== "" && checkOut.value !== "") {
-        arrivalInput.classList.remove("hidden");
+    	let div = document.getElementById('arrival');
+    	div.style.opacity=0;
+        opacity = 0;
+        fadeNode = div;
+        fadeIn(500);
+        div.style.display="block";
     }
     else {
         arrivalInput.classList.add("hidden");
