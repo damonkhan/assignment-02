@@ -16,6 +16,7 @@ let breakfast = document.querySelector("#checkbox-breakfast");
 let reset = document.querySelector("#reset");
 let submitBtn = document.querySelector('#submitBtn');
 let payBtn = document.querySelector('#payBtn');
+let firstName = document.getElementById('first-name');
 let blankMsg = " Cannot be left blank";
 let repeater;
 let opacity = 0;
@@ -401,5 +402,17 @@ rooms.addEventListener("change", calculateCost);
 submitBtn.addEventListener("click", detailsValidator);
 payBtn.addEventListener("click", ccValidator);
 reset.addEventListener("click", function () { document.querySelector("#total").textContent = "0";} );
+
+// validation
+document.getElementById('first-name').addEventListener("blur", validateFName);
+document.getElementById('last-name').addEventListener("blur", validateLName);
+document.getElementById('city').addEventListener("blur", validateCity);
+document.getElementById('postal').addEventListener("blur", validatePostalCode);
+document.getElementById('email').addEventListener("blur", validateEmail);
+document.getElementById('ccnum').addEventListener("blur", validateCardNum);
+document.getElementById('cvvnum').addEventListener("blur", validateCVV);
+document.getElementById('month').addEventListener("blur", validateMM);
+document.getElementById('year').addEventListener("blur", validateYY);
+
 
 
