@@ -343,7 +343,8 @@ function ccValidator() {
 	}
 }
 
-// code block comes from Vimal Kumar, COMPX222
+//transition comes from Vimal Kumar, COMPX222
+// START
 function fadeIn(duration) {
      var interval = duration/increments;
      repeater = setInterval(increaseOpacity, interval);
@@ -385,6 +386,7 @@ function decreaseOpacity()
         clearInterval(repeater);
     }
 }
+//END
 
 
 // Unobtrusive JavaScript
@@ -399,8 +401,6 @@ adults.addEventListener("change", calculateCost);
 child.addEventListener("change", calculateCost);
 breakfast.addEventListener("change", calculateCost);
 rooms.addEventListener("change", calculateCost);
-submitBtn.addEventListener("click", detailsValidator);
-payBtn.addEventListener("click", ccValidator);
 reset.addEventListener("click", function () { document.querySelector("#total").textContent = "0";} );
 
 // validation
@@ -413,6 +413,8 @@ document.getElementById('ccnum').addEventListener("blur", validateCardNum);
 document.getElementById('cvvnum').addEventListener("blur", validateCVV);
 document.getElementById('month').addEventListener("blur", validateMM);
 document.getElementById('year').addEventListener("blur", validateYY);
+submitBtn.addEventListener("click", detailsValidator);
+payBtn.addEventListener("click", ccValidator);
 
 
 
