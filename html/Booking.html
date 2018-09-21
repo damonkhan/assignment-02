@@ -92,8 +92,8 @@
                     <p id="error-message"></p>
                 </div>
                 <div id="arrival" class="">
-                    <label for="arrival-time" class="required">Arrival Time</label>
-                    <select name="arrival-time" id="arrive-time" class="req-input" title="Arrival time" required>
+                    <label class="required">Arrival Time</label>
+                    <select name="arrival-time" id="arrive-time" class="req-input" title="Arrival time">
                         <option value="time" selected>Select time</option>
                         <option value="10:00">10:00</option>
                         <option value="10:00">10:30</option>
@@ -173,21 +173,21 @@
                 <div id="payment">
                     <h3><i class="fas fa-credit-card"></i> Secure Booking</h3>
                     <label class="required">Card Type</label>
-                    <input type="radio" name="card" value="Visa" id="visa" required/><img class="card" src="../images/visa.png"/>
-                    <input type="radio" name="card" value="Mastercard" id="master"/><img class="card" src="../images/mastercard.png" />
-                    <input type="radio" name="card" value="American Express" id="amex"/><img class="card" src="../images/amex.png" />
-                    <input type="radio" name="card" value="Discover" id="discover"/><img class="card" src="../images/discover.png" />
+                    <input type="radio" name="card" value="Visa" id="visa" required/><img class="card" src="../images/visa.png"  alt="visa logo"/>
+                    <input type="radio" name="card" value="Mastercard" id="master"/><img class="card" src="../images/mastercard.png" alt="mastercard logo" />
+                    <input type="radio" name="card" value="American Express" id="amex"/><img class="card" src="../images/amex.png" alt="amex logo" />
+                    <input type="radio" name="card" value="Discover" id="discover"/><img class="card" src="../images/discover.png" alt="discover logo" />
 
                     <label class="required">Card Number</label>
-                    <input id="ccnum" name="ccnum" type="text" class="" placeholder="Card Number" min="16" maxlength="16">
+                    <input id="ccnum" name="ccnum" type="text" class="" placeholder="Card Number" maxlength="16">
                     <label class="required ">CVV</label>
-                    <input id="cvvnum" name="cvvnum" type="text" class="" placeholder="CVV" min="3" maxlength="3">
+                    <input id="cvvnum" name="cvvnum" type="text" class="" placeholder="CVV" maxlength="3">
                     <label class="required">Expiry Date</label>
-                    <input id="month" name="mm" type="text" class=" expiry cc-label" placeholder="MM" min="2" maxlength="2"> / <input id="year" type="text" name="yy" class=" expiry cc-label" placeholder="YY" min="2" maxlength="2">
+                    <input id="month" name="mm" type="text" class=" expiry cc-label" placeholder="MM" maxlength="2"> / <input id="year" type="text" name="yy" class=" expiry cc-label" placeholder="YY" maxlength="2">
 
                 </div>
-                <input type="reset" value="Cancel" id="cancel">
                 <button type="button" id="payBtn">Pay Now</button>
+                <button type="button" id="cancel">Cancel</button>
             </div>
             <div class="form-divs" id="submit-div">
                 <p>By completing this booking, you agree to our <a href="javascript:void(0)" style="text-decoration:none">Terms of Use</a> and <a href="javascript:void(0)" style="text-decoration:none">Room regulations</a></p>

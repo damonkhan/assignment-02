@@ -179,6 +179,9 @@ function validatePostalCode() {
     if (!(number >= 0 && number <= 9999)) {
         displayErrorMessage(document.getElementById('postal'), msg);
         return true;
+    } else if (number.value.length < 4) {
+        msg = " Must be a 4 digit number"
+        displayErrorMessage(number, msg);
     }
     // valid
     return false;
@@ -201,6 +204,9 @@ function validateCardNum() {
 		let msg = " Invalid card number";
 		displayErrorMessage(ccNum, msg);
 		return true;
+	} else if(ccNum.value.length < 16) {
+	    let msg = " Must be a 16 digit number";
+	    displayErrorMessage(ccNum, msg);
 	}
 	return false;
 }
@@ -211,6 +217,9 @@ function validateCVV() {
 		let msg = " Invalid CVV number";
 		displayErrorMessage(cvvNum, msg);
 		return true;
+	} else if (cvvNum.value.length < 3) {
+	    let msg = " Must be a 3 digit number";
+        displayErrorMessage(cvvNum, msg);
 	}
 	return false;
 }
@@ -221,6 +230,9 @@ function validateMM() {
 		let msg = " Invalid month";
 		displayErrorMessage(month, msg);
 		return true;
+	} else if(month.value.length < 2) {
+	    let msg = " Must be a 2 digit number"
+	    displayErrorMessage(month, msg);
 	}
 	return false;
 }
@@ -231,7 +243,10 @@ function validateYY() {
 		let msg = " Invalid year";
 		displayErrorMessage(year, msg);
 		return true;
-	}
+	} else if(year.value.length < 2) {
+      	    let msg = " Must be a 2 digit number"
+      	    displayErrorMessage(year, msg);
+      	}
 	return false;
 }
 
@@ -415,6 +430,10 @@ document.getElementById('month').addEventListener("blur", validateMM);
 document.getElementById('year').addEventListener("blur", validateYY);
 submitBtn.addEventListener("click", detailsValidator);
 payBtn.addEventListener("click", ccValidator);
+document.getElementById('cancel').addEventListener('click', function() {
+    document.getElementById('first-name').focus();
+    document.location.reload();
+})
 
 
 
