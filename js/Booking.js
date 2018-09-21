@@ -204,11 +204,11 @@ function validateCardNum() {
 	return false;
 }
 
-function validateCSC() {
-	cscNum = document.getElementById('cscnum');
-	if (isNaN(cscNum.value)) {
-		let msg = " Invalid CSC number";
-		displayErrorMessage(cscNum, msg);
+function validateCVV() {
+	cvvNum = document.getElementById('cvvnum');
+	if (isNaN(cvvNum.value)) {
+		let msg = " Invalid CVV number";
+		displayErrorMessage(cvvNum, msg);
 		return true;
 	}
 	return false;
@@ -242,9 +242,9 @@ function validateCCNums() {
         msg = " Invalid card number";
         displayErrorMessage(document.getElementById('ccnum'), msg);
         return true;
-    } else if (Number(document.getElementById('cscnum').value) < 0 || Number(document.getElementById('cscnum').value) > 999) {
-        msg = " Invalid csc number";
-        displayErrorMessage(document.getElementById('cscnum'), msg);
+    } else if (Number(document.getElementById('cvvnum').value) < 0 || Number(document.getElementById('cvvnum').value) > 999) {
+        msg = " Invalid cvv number";
+        displayErrorMessage(document.getElementById('cvvnum'), msg);
         return true;
     } else if (Number(document.getElementById('month').value) === 0 || Number(document.getElementById('month').value) > 12) {
         msg = " Invalid month";
@@ -330,9 +330,9 @@ function ccValidator() {
 	if (validateCardNum()) {
 		document.getElementById('ccnum').focus();
 	} else if (validateCCNums()) {
-		document.getElementById('cscnum').focus();
-	} else if (validateCSC()) {
-		document.getElementById('cscnum').focus();
+		document.getElementById('cvvnum').focus();
+	} else if (validateCVV()) {
+		document.getElementById('cvvnum').focus();
 	} else if (validateMM()) {
 		document.getElementById('month').focus();
 	} else if (validateYY()) {
